@@ -1,6 +1,6 @@
 // src/App.js
 import React, { useState } from 'react';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/dashboard';
 import Login from './pages/Login';
 import { setAuthToken } from './api';
 
