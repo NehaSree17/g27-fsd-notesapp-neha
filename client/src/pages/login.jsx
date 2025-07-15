@@ -7,8 +7,7 @@ function Login({ onLogin }) {
   const [error, setError] = useState('');
 
   const handleSubmit = async () => {
-    const url = `${import.meta.env.VITE_API_URL}/api/auth/${isRegister ? 'register' : 'login'}`;
-
+    const url = `http://localhost:5000/api/auth/${isRegister ? 'register' : 'login'}`;
 
     try {
       const res = await fetch(url, {
