@@ -10,7 +10,7 @@ function AddNote({ token }) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/notes/add', {
+      const response = await axios.post('https://g27-fsd-notesapp-neha.onrender.com/api/notes/add', {
         title,
         body,
         tags: tags.split(',').map(tag => tag.trim()),
