@@ -7,7 +7,7 @@ function Login({ onLogin }) {
   const [error, setError] = useState('');
 
   const handleSubmit = async () => {
-    const url = `http://localhost:5000/api/auth/${isRegister ? 'register' : 'login'}`;
+    const url = `https://g27-fsd-notesapp-neha.onrender.com/api/auth/${isRegister ? 'register' : 'login'}`;
 
     try {
       const res = await fetch(url, {
