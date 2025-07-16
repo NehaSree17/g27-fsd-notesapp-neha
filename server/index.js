@@ -10,7 +10,13 @@ const authRoutes = require('./routes/auth');
 const noteRoutes = require('./routes/notes');
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: 'https://your-frontend.vercel.app', // replace with your frontend URL
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // ✅ Match database name casing
