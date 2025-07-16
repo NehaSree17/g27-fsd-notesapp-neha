@@ -62,10 +62,10 @@ function Dashboard({ token, onLogout }) {
     }
   };
 
-  // ❌ Delete a Note
+  // ❌ Delete a Note (fixed)
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`https://g27-fsd-notesapp-neha.onrender.com/${id}`, {
+      const res = await fetch(`https://g27-fsd-notesapp-neha.onrender.com/api/notes/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });
