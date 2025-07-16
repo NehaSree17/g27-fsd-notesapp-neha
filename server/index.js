@@ -11,8 +11,8 @@ const noteRoutes = require('./routes/notes');
 
 const app = express();
 const corsOptions = {
-  origin: 'https://your-frontend.vercel.app', // replace with your frontend URL
-  optionsSuccessStatus: 200
+  origin: 'https://g27-fsd-notesapp-neha-i2f9.vercel.app/', // replace with your frontend URL
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
