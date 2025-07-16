@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // ✅ Use Vite environment variable for backend URL
 const API = axios.create({
-  baseURL: `${import.meta.env.VITE_API_URL}/api`,
+  baseURL: 'https://g27-fsd-notesapp-neha.onrender.com/api',
 });
 
 // ✅ Include token in all requests
