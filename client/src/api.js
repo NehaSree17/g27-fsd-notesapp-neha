@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // ✅ Backend URL
+  baseURL: 'https://g27-fsd-notesapp-neha.vercel.app/', // ✅ Backend URL
 });
 
 // ✅ Automatically include token in all requests
