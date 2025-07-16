@@ -1,14 +1,14 @@
-// client/src/api.js
 import axios from 'axios';
 
+// ✅ Use Vite environment variable for backend URL
 const API = axios.create({
-  baseURL: 'https://g27-fsd-notesapp-neha.vercel.app/api', // ✅ Backend URL
+  baseURL: `${import.meta.env.VITE_API_URL}/api`,
 });
 
-// ✅ Automatically include token in all requests
+// ✅ Include token in all requests
 export const setAuthToken = (token) => {
   if (token) {
-    API.defaults.headers.common['Authorization'] = `Bearer ${token}`; // ✅ Bearer format
+    API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
   } else {
     delete API.defaults.headers.common['Authorization'];
   }
