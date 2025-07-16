@@ -15,7 +15,7 @@ function Dashboard({ token, onLogout }) {
   const fetchNotes = async () => {
     const url = filter === 'All' ? '/api/notes' : `/api/notes?tag=${filter}`;
     try {
-      const res = await fetch(`http://localhost:5000${url}`, {
+      const res = await fetch(`https://g27-fsd-notesapp-neha.onrender.com${url}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -44,7 +44,7 @@ function Dashboard({ token, onLogout }) {
     const method = isEditing ? 'PUT' : 'POST';
 
     try {
-      const res = await fetch(`http://localhost:5000${endpoint}`, {
+      const res = await fetch(`https://g27-fsd-notesapp-neha.onrender.com${endpoint}`, {
         method,
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ function Dashboard({ token, onLogout }) {
   // ❌ Delete a Note
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/notes/${id}`, {
+      const res = await fetch(`https://g27-fsd-notesapp-neha.onrender.com/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });
